@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Define data
 particle_data = {
     'Particle Size (μm)': [5, 15, 25, 50, 100, 150],  # Particle size in μm
-    'Quantity': [122, 100, 67, 29, 10, 4]  # Number of particles
+    'Quantity': [7, 3, 0, 0, 0, 0]  # Number of particles
 }
 
 # Convert data to DataFrame
@@ -36,5 +36,5 @@ particle_df['Cumulative PPM'] = (particle_df['Cumulative Total Area (μm²)'] / 
 # Display results
 print("Total particle area (μm²):", total_particle_area)
 print("Total surface area (μm²):", area_in_um2)
-print("Contamination (ppm):", contamination_ppm)
+print("Contamination (ppm):", contamination_ppm.round(3))
 print(particle_df)
